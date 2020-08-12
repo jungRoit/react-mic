@@ -4,7 +4,10 @@ const audioCtx = (window.AudioContext ||
   window.oAudioContext ||
   window.msAudioContext);
 
-let analyser = audioCtx.createAnalyser();
+let analyser = null;
+if(audioCtx) {
+   analyser = audioCtx.createAnalyser();
+}
 
 const AudioContext = {
 
