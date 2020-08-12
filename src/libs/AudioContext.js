@@ -1,4 +1,4 @@
-const audioCtx = (window.AudioContext ||
+const audioCtx = new (window.AudioContext ||
   window.webkitAudioContext ||
   window.mozAudioContext ||
   window.oAudioContext ||
