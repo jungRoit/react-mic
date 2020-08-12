@@ -1,4 +1,9 @@
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = (window.AudioContext ||
+  window.webkitAudioContext ||
+  window.mozAudioContext ||
+  window.oAudioContext ||
+  window.msAudioContext);
+
 let analyser = audioCtx.createAnalyser();
 
 const AudioContext = {
