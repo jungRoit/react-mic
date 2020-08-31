@@ -1,9 +1,8 @@
-require('./AudioContextMock.js');
 let audioCtx = null;
 let analyser = null;
 
 
-// if(window) {
+if(window) {
     audioCtx = new (window.AudioContext ||
     window.webkitAudioContext ||
     window.mozAudioContext ||
@@ -13,7 +12,7 @@ let analyser = null;
   if(audioCtx) {
      analyser = audioCtx.createAnalyser();
   }
-// }
+}
 
 const AudioContext = {
 
