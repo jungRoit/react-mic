@@ -1,4 +1,4 @@
-require('./AudioContextMock');
+require('./AudioContextMock.js');
 let audioCtx = null;
 let analyser = null;
 
