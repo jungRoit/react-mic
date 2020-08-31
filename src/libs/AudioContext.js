@@ -1,13 +1,19 @@
-const audioCtx = new (window.AudioContext ||
-  window.webkitAudioContext ||
-  window.mozAudioContext ||
-  window.oAudioContext ||
-  window.msAudioContext);
-
+require('./AudioContextMock');
+let audioCtx = null;
 let analyser = null;
-if(audioCtx) {
-   analyser = audioCtx.createAnalyser();
-}
+
+
+// if(window) {
+    audioCtx = new (window.AudioContext ||
+    window.webkitAudioContext ||
+    window.mozAudioContext ||
+    window.oAudioContext ||
+    window.msAudioContext);
+  
+  if(audioCtx) {
+     analyser = audioCtx.createAnalyser();
+  }
+// }
 
 const AudioContext = {
 
