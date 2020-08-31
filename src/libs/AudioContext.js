@@ -1,3 +1,4 @@
+import {AudioContext as context} from './AudioContextMock';
 let audioCtx = null;
 let analyser = null;
 
@@ -7,7 +8,7 @@ if(window) {
     window.webkitAudioContext ||
     window.mozAudioContext ||
     window.oAudioContext ||
-    window.msAudioContext);
+    window.msAudioContext || context);
   
   if(audioCtx) {
      analyser = audioCtx.createAnalyser();

@@ -1,7 +1,5 @@
-(function() {
-  'use strict';
 
-  var AnalyserNode, AudioBuffer, AudioBufferSourceNode, AudioContext, AudioDestinationNode, AudioListener, AudioNode, AudioParam, AudioSourceNode, BiquadFilterNode, ChannelMergerNode, ChannelSplitterNode, ConvolverNode, DelayNode, DynamicsCompressorNode, AudioGain, GainNode, JavaScriptNode, MediaElementAudioSourceNode, MediaStreamAudioSourceNode, OscillatorNode, PannerNode, ScriptProcessorNode, WaveShaperNode, WaveTable, PeriodicWave,
+  var AnalyserNode, AudioBuffer, AudioBufferSourceNode, AudioDestinationNode, AudioListener, AudioNode, AudioParam, AudioSourceNode, BiquadFilterNode, ChannelMergerNode, ChannelSplitterNode, ConvolverNode, DelayNode, DynamicsCompressorNode, AudioGain, GainNode, JavaScriptNode, MediaElementAudioSourceNode, MediaStreamAudioSourceNode, OscillatorNode, PannerNode, ScriptProcessorNode, WaveShaperNode, WaveTable, PeriodicWave,
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) { child[key] = parent[key]; } } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
@@ -309,7 +307,7 @@
     return PeriodicWave;
   })();
 
-  AudioContext = (function() {
+ export const  AudioContext = (function() {
     function AudioContext() {
       this.destination = new AudioDestinationNode();
       this.listener = new AudioListener();
@@ -411,8 +409,6 @@
 
   })();
 
-  if(!window.AudioContext) {
-    window.AudioContext = AudioContext;
-  }
-
-})();
+  // if(!window.AudioContext) {
+  //   window.AudioContext = AudioContext;
+  // }
